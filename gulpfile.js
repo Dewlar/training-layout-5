@@ -1,4 +1,4 @@
-let project_folder = "dist";
+let project_folder = "build";
 let source_folder = "src";
 
 let path = {
