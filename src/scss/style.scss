@@ -65,7 +65,7 @@
             height: 33px;
             margin: -20px 0 0 0;
             text-align: center;
-            background: linear-gradient(#fff 20%, #f5dd55);
+            background: linear-gradient(#fff 40%, #f5dd55);
             background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 3px 3px 10px black;
@@ -80,29 +80,29 @@
           .company-description {
             font-size: 9px;
             margin-top: 2px;
-            background: linear-gradient(#fff 20%, #f5dd55);
+            background: linear-gradient(#fff 40%, #f5dd55);
             background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 2px 2px 10px black;
           }
 
-          .clip-left{
+          .clip-left {
             background: url(../images/clip-left.png) no-repeat center center;
             position: absolute;
             z-index: 22;
             height: 37px;
             width: 47px;
-            left:-32px;
-            top:132px;
+            left: -32px;
+            top: 132px;
           }
-          .clip-right{
+          .clip-right {
             background: url(../images/clip-right.png) no-repeat center center;
             position: absolute;
             z-index: 22;
             height: 37px;
             width: 47px;
-            left:538px;
-            top:132px;
+            left: 538px;
+            top: 132px;
           }
         }
 
@@ -222,7 +222,7 @@
 
               .bg-green {
                 --green-contacts-text-color: #ffffcb; //text color on green field, consider transparency
-                
+
                 flex: 0 0 53px;
                 width: 379px;
                 display: flex;
@@ -261,6 +261,7 @@
                   display: flex;
                   justify-content: space-between;
                   padding: 0 15px 0 10px;
+                  
                   a {
                     font-family: Arial;
                     color: var(--green-contacts-text-color);
@@ -268,6 +269,82 @@
                     font-size: 9px;
                     text-decoration: none;
                     align-self: flex-end;
+                  }
+                }
+              }
+            }
+
+            .drinks-page {//OUR DRINKS - page
+              --drink-description-text-color: #303030;
+
+              flex: 0 0 418px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin: 4px 0 0 0;
+              background: url(../images/bg-full-menu.png) no-repeat 50% 50%;
+              border-top: 1px #8f8571 dotted;
+              border-bottom: 1px #8f8571 dotted;
+              width: 388px;
+              align-self: center;
+              padding: 2px 0 2px 0;
+
+              .drinks {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+
+                .drink {
+                  flex: 0 0 73px;
+                  margin: 4px 0 0 0;
+                  background: url(../images/page2/brown-opacity.png);
+                  border-radius: 5px;
+                  align-items: center;
+                  display: flex;
+                  margin: 3px 15px;
+
+                  img {
+                    height: 53px;
+                    width: 73px;
+                    margin: 0 10px;
+                    padding: 2px;
+                    background-image: url(../images/page2/bg-drinks.png);
+                    border-radius: 3px;
+                  }
+
+                  .drink-description {
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-family: Tahoma;
+                    color: var(--drink-description-text-color);
+
+                    a {
+                      text-decoration: none;
+                      color: var(--drink-description-text-color);
+                      font-weight: bold;
+                      margin-right: 5px;
+                      font-size: 12px;
+                    }
+
+                    .drink-price {
+                      color: var(--drink-description-text-color);
+                      font-weight: bold;
+                      font-size: 12px;
+                    }
+
+                    p {
+                      font-size: 9px;
+                      margin: 5px 0 0 0;
+                      color: var(--drink-description-text-color);
+
+                      span{
+                        font-weight: bold;
+                      }
+                    }
+                  }
+
+                  &:first-child {
+                    margin: 20px 15px 3px 15px;
                   }
                 }
               }
