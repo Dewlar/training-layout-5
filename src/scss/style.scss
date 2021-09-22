@@ -67,6 +67,7 @@
             text-align: center;
             background: linear-gradient(#fff 40%, #f5dd55);
             background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 3px 3px 10px black;
           }
@@ -82,6 +83,7 @@
             margin-top: 2px;
             background: linear-gradient(#fff 40%, #f5dd55);
             background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 2px 2px 10px black;
           }
@@ -126,7 +128,7 @@
               flex-direction: column;
               align-items: center;
               margin: 4px 0 0 0;
-              background: url(../images/bg-full-menu.png) no-repeat 50% 50%;              
+              background: url(../images/bg-full-menu.png) no-repeat 50% 50%;
               background-color: rgb(143, 136, 136);
               width: 384px;
               align-self: center;
@@ -188,7 +190,7 @@
             }
 
             .head-menu {
-              padding-bottom: 2px;          
+              padding-bottom: 2px;
               border-bottom: 1px #8f8571 dotted;
               width: 385px;
               align-self: center;
@@ -453,41 +455,47 @@
 
                   form {
                     display: flex;
-                    justify-content: space-between;
                     flex-wrap: wrap;
+                    overflow: hidden;
 
                     %form-font {
                       font-family: Tahoma;
                       font-size: 9px;
                     }
 
+                    %form-border {
+                      outline: none;
+                      border: 1px #767676 solid;
+                      border-radius: 1px;
+                      box-shadow: 1px -1px 1px 0px #767676;
+                    }
+
                     input[type="text"] {
                       padding: 0 0 0 3px;
+                      margin: 2px 0 0 0;
                       width: 87px;
                       height: 15px;
-                      outline: none;
-                      box-shadow: 1px -1px 0px 0px #000;
                       @extend %form-font;
+                      @extend %form-border;
                     }
 
                     input[type="email"] {
                       padding: 0 0 0 3px;
+                      margin: 2px 2px 0 auto;
                       width: 87px;
                       size: 30px;
                       height: 15px;
-                      outline: none;
-                      box-shadow: 1px -1px 0px 0px #000;
+                      @extend %form-border;
                       @extend %form-font;
                     }
 
                     textarea {
-                      margin: 7px 0;
+                      margin: 7px 2px 7px 0;
                       padding: 2px 3px;
-                      max-height: 65px;
-                      min-width: 130px;
-                      min-height: 20px;
-                      outline: none;
-                      box-shadow: 1px -1px 0px 0px #000;
+                      flex: 1 0 160px;
+                      resize: none;
+                      height: 65px;
+                      @extend %form-border;
                       @extend %form-font;
                     }
 
@@ -502,11 +510,12 @@
                       background: #dbccab;
                       border: none;
                       border-radius: 2px;
-                      box-shadow: 1px -1px 3px 0px #918976 inset,
-                        -1px 1px 3px 0px #918976 inset;
+                      box-shadow: 1px -1px 2px 0px #918976 inset,
+                        -1px 1px 2px 0px #918976 inset;
                       color: #6a6761;
                       @extend %form-font;
                       font-weight: bold;
+                      cursor: pointer;
                     }
                   }
                 }
@@ -519,7 +528,8 @@
               flex: 0 0 12px;
               margin: 2px 0 0 0;
               padding-top: 4px;
-              background: url(../images/green-white-orange.png) no-repeat 50% 50%;                
+              background: url(../images/green-white-orange.png) no-repeat 50%
+                50%;
               border-top: 1px #8f8571 dotted;
               width: 388px;
               align-self: center;
